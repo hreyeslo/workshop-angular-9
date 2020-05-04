@@ -1,5 +1,5 @@
-<hello name="{{ name }}" *ngFor="let i of list">
-    <span #span>{{i}}</span>
+<hello name="{{ name }}" *ngFor="let i of list" (count)="spanCount=$event">
+    <span *ngFor="let j of list">{{i}}</span>
 </hello>
 
 <br><hr><br>
