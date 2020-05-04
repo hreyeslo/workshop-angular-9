@@ -1,4 +1,13 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<hello name="{{ name }}" *ngFor="let i of list">
+    <span #span>{{i}}</span>
+</hello>
+
+<br><hr><br>
+
+<button (click)="list.push(list.length + 1)">add</button>
+
+<br><br>
+
+Nº de componentes: {{compCount}}
+<br>
+Nº de span: {{spanCount}}
